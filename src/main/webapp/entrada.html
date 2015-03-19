@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"></meta>
+	<script src="/js/vendors/react.js" ></script>
+	<script src="/js/vendors/JSXTransformer.js"></script>
+</head>
+<body>
+	<script type="text/jsx">
+		var App = React.createClass({
+			getInitialState:function(){
+				return {
+					name: 'Daniel'
+				}
+			},
+			//getDefaultProps: function(){
+			//	return {
+			//			age: 24
+			//		}
+			//},
+			propTypes: {
+				age: React.PropTypes.number.isRequired
+			},
+			updateState: function(e){
+				this.setState({
+					name: e.target.value
+				});
+			},
+			render : function(){
+				var age = this.props.age;
+				return (
+					<div>
+						<h1>Hola mundo inmundo, con ReactJs</h1>
+						<h4>Bienvenido {this.state.name}, tienes {age} a&ntilde;os</h4>
+						<form>
+							<input type="text" onChange={this.updateState} />
+						</form>
+					</div>
+				)
+			}
+		});
+		
+		React.render(<App age={24} />,document.body);
+	</script>
+</body>
+</html>

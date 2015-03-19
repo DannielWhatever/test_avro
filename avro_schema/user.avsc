@@ -1,0 +1,23 @@
+{
+	"namespace" : "cl.springboot.test_avro.jetty.domain",
+	"type" : "record",
+	"name" : "User",
+	"fields" : [ 
+	{
+		"name" : "id",
+		"type" : "int"
+	}, 
+	{
+		"name" : "nickname",
+		"type" : "string"
+	},
+	{
+		"name" : "soccerTeam",
+		"type" : "string"
+	},
+	{
+		"name" : "weight",
+		"type" : "double"
+	}
+	]
+}
